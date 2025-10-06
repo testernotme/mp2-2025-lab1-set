@@ -124,9 +124,9 @@ int TBitField::operator!=(const TBitField &bf) const // сравнение
 
 TBitField TBitField::operator|(const TBitField &bf) const // операция "или"
 {
-	int len = max(bf.GetLength(), BitLen);
+	int len = max(bf.GetLength(), GetLength());
 	TBitField temp(len);	
-	for (int i = 0; i < BitLen; i++) {
+	for (int i = 0; i < GetLength(); i++) {
 		if ((*this).GetBit(i)) {
 			temp.SetBit(i);
 		}
