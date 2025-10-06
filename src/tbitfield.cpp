@@ -122,7 +122,7 @@ int TBitField::operator!=(const TBitField &bf) const // сравнение
   return (1+operator==(bf))%2;
 }
 
-TBitField TBitField::operator|(const TBitField &bf) const // операция "или"
+TBitField TBitField::operator|(const TBitField &bf)  // операция "или"
 {
 	int len = max(bf.GetLength(), GetLength());
 	TBitField temp(len);	
